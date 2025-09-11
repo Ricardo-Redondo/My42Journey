@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 11:10:47 by ric               #+#    #+#             */
-/*   Updated: 2025/09/11 11:28:19 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/09/11 14:27:16 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	ft_print_alphabet(void)
 	write (1, alphabet, 26);
 }
 
-int main()
-{
-	ft_print_alphabet();
-}
+// int main()
+// {
+// 	ft_print_alphabet();
+// }

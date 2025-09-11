@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 11:02:03 by ric               #+#    #+#             */
-/*   Updated: 2025/09/11 11:18:49 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/10 15:06:36 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/11 14:27:18 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,5 @@
 
 void	ft_putchar(char c)
 {
-	write (1, &c, 1);
-}
-
-int main()
-{
-	ft_putchar('c');
+	write(1, &c, 1);
 }

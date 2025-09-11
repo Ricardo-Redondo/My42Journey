@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_is_negative.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 11:32:12 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/11 14:27:15 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/11 14:32:28 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/11 14:59:11 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void ft_is_negative(int n)
 {
-	char	*alphabet;
-
-	alphabet = "zyxwvutsrqponmlkjihgfedcba";
-	write (1, alphabet, 26);
+	if (n < 0)
+		write(1, "N", 1);
+	else
+		write(1, "P", 1);
 }
+
+//int n = 1;
+//int n = -1;
+//int n = 0;
 
 // int main()
 // {
-// 	ft_print_alphabet();
+// 	ft_is_negative(n);
 // }
