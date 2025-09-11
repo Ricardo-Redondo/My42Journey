@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_negative.c                                   :+:      :+:    :+:   */
+/*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 14:32:28 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/11 16:07:50 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/11 16:07:06 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/11 16:44:18 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_is_negative(int n)
+void	ft_print_combo(void)
 {
-	if (n < 0)
-		write(1, "N", 1);
-	else
-		write(1, "P", 1);
-}
+	int	a;
+	int	b;
+	int	c;
 
-//int n = 1;
-//int n = -1;
-//int n = 0;
+	a = '0';
+	b = a + 1;
+	c = b + 1;
+	while (a <= '7')
+	{
+		write (1, &a, 1);
+		write (1, &b, 1);
+		write (1, &c, 1);
+		if (a != '7')
+		{
+			write (1, ",", 1);
+		}
+		a++;
+		b = a + 1;
+		c = b + 1;
+	}
+}
 
 // int main()
 // {
-// 	ft_is_negative(n);
+// 	ft_print_combo();
 // }

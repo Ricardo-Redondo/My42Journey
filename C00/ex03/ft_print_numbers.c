@@ -6,7 +6,7 @@
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 14:14:02 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/11 14:27:14 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/09/11 16:08:42 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_print_numbers(void)
 {
-	char *numbers;
-	numbers = "123456789";
+	char	*numbers;
 
+	numbers = "123456789";
 	write(1, numbers, 9);
 }
 
