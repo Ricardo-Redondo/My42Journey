@@ -1,16 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/14 17:31:39 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/0*********9/14 18:01:58 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/15 11:14:08 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/15 11:38:33 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_ft(int *nbr)
+#include <unistd.h>
+
+void	ft_putstr(char *str)
 {
-	*nbr = 42;
+	int i;
+	
+	i = 0;
+	while	(*str != '\0')
+	{
+		write(1, &str[i], 1);
+		str++;
+	}
 }
+
+// int main()
+// {
+// 	ft_putstr("Cluster1");
+// }
