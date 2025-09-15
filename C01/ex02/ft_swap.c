@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/13 17:05:44 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/14 18:11:00 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/14 18:41:32 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/14 18:52:58 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putnbr(int nb)
+void	ft_swap(int *a, int *b)
 {
-	char	c;
+	int swap;
 
-	if (nb < 0)
-	{
-		write(1, "-", 1);
-		nb = -nb;
-	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	c = '0' + (nb % 10);
-	write(1, &c, 1);
+	swap = *a;
+	*a = *b;
+	*b = swap;
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr(42);
-// }
