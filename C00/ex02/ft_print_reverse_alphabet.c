@@ -6,13 +6,13 @@
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 11:32:12 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/11 14:27:15 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/09/16 15:27:53 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_print_reverse_alphabet(void)
 {
 	char	*alphabet;
 
@@ -20,7 +20,7 @@ void	ft_print_alphabet(void)
 	write (1, alphabet, 26);
 }
 
-// int main()
-// {
-// 	ft_print_alphabet();
-// }
+int main()
+{
+	ft_print_reverse_alphabet();
+}

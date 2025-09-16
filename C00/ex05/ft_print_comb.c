@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_comb.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 16:07:06 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/13 14:18:06 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/09/16 15:27:44 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_combo(void)
+void	ft_print_comb(void)
 {
 	int	a;
 	int	b;
@@ -36,7 +36,7 @@ void	ft_print_combo(void)
 	}
 }
 
-// int main()
-// {
-// 	ft_print_combo();
-// }
+int main()
+{
+	ft_print_comb();
+}

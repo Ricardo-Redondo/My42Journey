@@ -6,13 +6,13 @@
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/11 16:07:06 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/15 11:48:14 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/09/16 15:27:41 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_combo2(void)
+void	ft_print_comb2(void)
 {
 	int		i;
 	char	a[2];
@@ -40,7 +40,7 @@ void	ft_print_combo2(void)
 	}
 }
 
-// int	main(void)
-// {
-// 	ft_print_combo2();
-// }
+int	main(void)
+{
+	ft_print_comb2();
+}

@@ -1,26 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/12 00:14:00 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/16 15:27:45 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/16 14:15:51 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/16 14:30:22 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_alphabet(void)
+char	*ft_strcpy(char *dest, char *src)
 {
-	char	*alphabet;
+	int i;
 
-	alphabet = "abcdefghijklmnopqrstuvwxyz";
-	write (1, alphabet, 26);
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	return (dest);
 }
-
-// int main()
-// {
-// 	ft_print_alphabet();
-// }
