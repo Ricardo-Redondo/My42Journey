@@ -1,40 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/13 17:05:44 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/18 16:14:42 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/18 13:19:16 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/18 14:29:33 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putnbr(int nb)
+char	*ft_strupcase(char *str)
 {
-	char	c;
+	int	i;
 
-	if (nb < 0)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (nb == -2147483648)
-			write(1, "-2147483648", 11);
-		else
+		if (str[i] >= 'a' && str[i] <= 'z')
 		{
-			write(1, "-", 1);
-			nb = -nb;
+			str[i] = str[i] - 32;
 		}
+		i++;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	c = '0' + (nb % 10);
-	write(1, &c, 1);
+	return (str);
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr(42);
-// }

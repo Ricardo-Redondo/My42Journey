@@ -1,40 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/13 17:05:44 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/18 16:14:42 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/18 14:25:59 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/18 15:04:38 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putnbr(int nb)
+int	ft_strcmp(char *s1, char *s2)
 {
-	char	c;
+	int	i;
 
-	if (nb < 0)
+	i = 0;
+	while (s1[i] == s2[i]  || s1[i] != '\0')
 	{
-		if (nb == -2147483648)
-			write(1, "-2147483648", 11);
-		else
-		{
-			write(1, "-", 1);
-			nb = -nb;
-		}
+		i++;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	c = '0' + (nb % 10);
-	write(1, &c, 1);
+	return (s1[i] - s2[i]);
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr(42);
-// }

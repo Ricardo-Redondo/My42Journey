@@ -1,40 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_uppercase.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/13 17:05:44 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/18 16:14:42 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/18 13:14:57 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/18 14:31:15 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putnbr(int nb)
+int	ft_str_is_uppercase(char *str)
 {
-	char	c;
+	int	i;
 
-	if (nb < 0)
+	i = 0;
+	if (str[0] == '\0')
 	{
-		if (nb == -2147483648)
-			write(1, "-2147483648", 11);
-		else
+		return (1);
+	}
+	while (str[i] != '\0')
+	{
+		if (!(str[i] >= 'A' && str[i] <= 'Z'))
 		{
-			write(1, "-", 1);
-			nb = -nb;
+			return (0);
 		}
+		i++;
 	}
-	if (nb >= 10)
-	{
-		ft_putnbr(nb / 10);
-	}
-	c = '0' + (nb % 10);
-	write(1, &c, 1);
+	return (1);
 }
-
-// int	main(void)
-// {
-// 	ft_putnbr(42);
-// }
