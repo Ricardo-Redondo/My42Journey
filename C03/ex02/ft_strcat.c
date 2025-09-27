@@ -1,26 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 11:32:12 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/19 11:56:04 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/22 14:01:34 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/25 11:34:45 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_reverse_alphabet(void)
+char	*ft_strcat(char *dest, char *src)
 {
-	char	*alphabet;
+	int i;
+	int v;
 
-	alphabet = "zyxwvutsrqponmlkjihgfedcba";
-	write (1, alphabet, 26);
+	i = 0;
+	v = 0;
+	if (src && dest)
+	{
+		while (dest[i] != '\0')
+		{
+			i++;
+		}
+		while(src[v] != '\0')
+		{
+			dest[i] = src[v];
+			i++;
+			v++;
+		}
+		dest[i] = '\0';
+		return(dest);
+	}
+	return(0);
 }
 
+// #include <stdio.h>
 // int main()
 // {
-// 	ft_print_reverse_alphabet();
+// 	char src[] = "bye";
+// 	char dest[] = "hello";
+// 	printf("%s", ft_strcat(dest, src));
 // }

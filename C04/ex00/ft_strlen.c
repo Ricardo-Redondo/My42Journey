@@ -1,26 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 11:32:12 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/19 11:56:04 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/25 12:20:15 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/25 12:20:19 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_print_reverse_alphabet(void)
+int	ft_strlen(char *str)
 {
-	char	*alphabet;
+	int	i;
 
-	alphabet = "zyxwvutsrqponmlkjihgfedcba";
-	write (1, alphabet, 26);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 
-// int main()
+// int main(void)
 // {
-// 	ft_print_reverse_alphabet();
+// 	char str[] = "Cluster1";
+// 	printf("This shit has %d characters", ft_strlen(str));
+// 	return (0);
 // }

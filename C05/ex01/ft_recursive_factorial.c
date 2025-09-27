@@ -1,26 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 11:32:12 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/19 11:56:04 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/27 18:04:20 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/27 18:12:02 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_print_reverse_alphabet(void)
+int	ft_recursive_factorial(int nb)
 {
-	char	*alphabet;
-
-	alphabet = "zyxwvutsrqponmlkjihgfedcba";
-	write (1, alphabet, 26);
+	if (nb <= 0)
+		return (0);
+	else if (nb == 1)
+		return (1);
+	else
+		return(nb * ft_recursive_factorial(nb - 1));
 }
 
-// int main()
-// {
-// 	ft_print_reverse_alphabet();
+// #include <stdio.h>
+// int main(){
+// 	int nb = 5;
+// 	printf("%i", ft_recursive_factorial(nb));
 // }

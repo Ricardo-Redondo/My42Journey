@@ -1,26 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/11 11:32:12 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/19 11:56:04 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/25 12:22:47 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/27 15:14:03 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_print_reverse_alphabet(void)
+void	ft_putnbr(int nb)
 {
-	char	*alphabet;
+	char	c;
 
-	alphabet = "zyxwvutsrqponmlkjihgfedcba";
-	write (1, alphabet, 26);
+	if (nb < 0)
+	{
+		if (nb == -2147483648)
+			write(1, "-2147483648", 12);
+		else
+		{
+			write(1, "-", 1);
+			nb = -nb;
+		}
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+	}
+	c = '0' + (nb % 10);
+	write(1, &c, 1);
 }
 
-// int main()
+// int	main(void)
 // {
-// 	ft_print_reverse_alphabet();
+// 	ft_putnbr(42);
 // }

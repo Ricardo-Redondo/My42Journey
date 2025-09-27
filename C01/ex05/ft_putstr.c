@@ -6,7 +6,7 @@
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 11:14:08 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/15 11:38:33 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/09/26 11:20:55 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	ft_putstr(char *str)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
-	while	(*str != '\0')
+	while (str[i] != '\0')
 	{
 		write(1, &str[i], 1);
-		str++;
+		i++;
 	}
 }
 

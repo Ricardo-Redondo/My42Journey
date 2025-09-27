@@ -6,7 +6,7 @@
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/18 13:02:12 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/18 14:28:48 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/09/27 12:29:40 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ int	ft_str_is_alpha(char *str)
 	}
 	while (str[i] != '\0')
 	{
-		if (!(str[i] >= 'A' && str[i] <= 'Z')
-			|| (str[i] >= 'a' && str[i] <= 'z'))
+		if (!((str[i] >= 'A' && str[i] <= 'Z')
+				|| (str[i] >= 'a' && str[i] <= 'z')))
 		{
 			return (0);
 		}

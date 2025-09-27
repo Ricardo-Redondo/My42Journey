@@ -6,7 +6,7 @@
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/09/15 16:00:02 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/18 12:15:20 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/09/22 15:54:29 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	ft_rev_int_tab(int *tab, int size)
 	int	temp;
 
 	i = 0;
-	while (tab[i] != size / 2)
+	while (i < size / 2)
 	{
 		temp = tab[i];
 		tab[i] = tab[size - 1 - i];
