@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 17:57:49 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/28 16:52:30 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/29 14:31:54 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/29 14:33:18 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int	ft_is_prime(int nb)
 {
 	int	i;
-
-	i = nb;
-	if (nb < 0)
+	
+	i = 2;
+	if (nb <= 1)
 		return (0);
-	else if (nb == 1 || nb == 0)
-		return (1);
-	else
+	while (i <= nb / i)
 	{
-		while (i > 1)
-		{
-			nb = nb * (i - 1);
-			i--;
-		}
-		return (nb);
+		if (nb % i == 0)
+			return (0);
+		i++;
 	}
+	return (1);
 }
 
-// #include <stdio.h>
-// int main(){
-// 	int nb = 5;
-// 	printf("%i", ft_iterative_factorial(nb));
-// }
+int	ft_find_next_prime(int nb)
+{
+	while (ft_is_prime(nb) == 0)
+		nb++;
+	return (nb);
+}

@@ -1,37 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_print_program_name.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 17:57:49 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/28 16:52:30 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/29 14:37:56 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/29 14:41:26 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	main(int argc, char **argv)
 {
 	int	i;
 
-	i = nb;
-	if (nb < 0)
-		return (0);
-	else if (nb == 1 || nb == 0)
-		return (1);
-	else
+	i = 0;
+	while (argv[0][i] != '\0' && argc)
 	{
-		while (i > 1)
-		{
-			nb = nb * (i - 1);
-			i--;
-		}
-		return (nb);
+		ft_putchar(argv[0][i]);
+		i++;
 	}
 }
-
-// #include <stdio.h>
-// int main(){
-// 	int nb = 5;
-// 	printf("%i", ft_iterative_factorial(nb));
-// }

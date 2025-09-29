@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 17:57:49 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/28 16:52:30 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/29 15:52:52 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/29 16:00:28 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+#include <stdlib.h>
+
+char	*ft_strdup(char *src)
 {
-	int	i;
+	int		i;
+	int		lenght;
+	char	*dest;
 
-	i = nb;
-	if (nb < 0)
-		return (0);
-	else if (nb == 1 || nb == 0)
-		return (1);
-	else
+	lenght = 0;
+	while (src[lenght] != '\0')
+		lenght++;
+	dest = (char *)malloc(sizeof(src + 1));
+	if (dest == NULL)
+		return (NULL);
+	i = 0;
+	while (i < lenght)
 	{
-		while (i > 1)
-		{
-			nb = nb * (i - 1);
-			i--;
-		}
-		return (nb);
+		dest[i] = src[i];
+		i++;
 	}
+	dest[i] = '\0';
+	return (dest);
 }
-
-// #include <stdio.h>
-// int main(){
-// 	int nb = 5;
-// 	printf("%i", ft_iterative_factorial(nb));
-// }

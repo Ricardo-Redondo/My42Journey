@@ -1,37 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_range.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/09/27 17:57:49 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/28 16:52:30 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/09/29 15:56:50 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/09/29 16:01:25 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+#include <stdlib.h>
+
+int	*ft_range(int min, int max)
 {
 	int	i;
+	int	lenght;
+	int	*dest;
 
-	i = nb;
-	if (nb < 0)
-		return (0);
-	else if (nb == 1 || nb == 0)
-		return (1);
-	else
+	i = 0;
+	lenght = max - min;
+	if (min >= max)
+		return (NULL);
+	dest = (int *)malloc(sizeof(int) * (lenght + 1));
+	if (dest == NULL)
+		return (NULL);
+	while (min < max)
 	{
-		while (i > 1)
-		{
-			nb = nb * (i - 1);
-			i--;
-		}
-		return (nb);
+		dest[i] = min;
+		i++;
+		min++;
 	}
+	return (dest);
 }
-
-// #include <stdio.h>
-// int main(){
-// 	int nb = 5;
-// 	printf("%i", ft_iterative_factorial(nb));
-// }
