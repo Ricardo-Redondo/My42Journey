@@ -3,15 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-<<<<<<< HEAD:Piscine-Reloaded/ex09/ft_ft.c
-/*   Created: 2025/10/12 15:44:55 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/12 15:52:45 by rsao-pay         ###   ########.fr       */
-=======
-/*   Created: 2025/09/22 15:52:40 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/09/22 15:52:41 by rsao-pay         ###   ########.fr       */
->>>>>>> b16b20a69c83cbe58f84ce44eb02a1c13de15178:C01/ex00/ft_ft.c
+/*   Created: 2025/10/12 17:46:34 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/10/12 17:46:36 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

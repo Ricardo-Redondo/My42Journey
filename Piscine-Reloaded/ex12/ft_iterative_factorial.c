@@ -6,10 +6,9 @@
 /*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 15:52:30 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/12 15:52:31 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/10/12 17:44:02 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 int	ft_iterative_factorial(int nb)
 {

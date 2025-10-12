@@ -6,7 +6,7 @@
 /*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 16:53:44 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/12 16:55:08 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/10/12 17:48:03 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 	int	i;
 
 	if (!tab || !f || length <= 0)
-        return;
+		return ;
 	i = 0;
 	while (i < length)
 	{
@@ -23,7 +23,7 @@ void	ft_foreach(int *tab, int length, void (*f)(int))
 		i++;
 	}
 }
-#include <unistd.h>
+/* #include <unistd.h>
 
 
 void	ft_putnbr(int nb)
@@ -53,4 +53,4 @@ int	main(void)
 
     ft_foreach(tab, 5, &ft_putnbr);
     return 0;
-}
+} */

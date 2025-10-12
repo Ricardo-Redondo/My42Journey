@@ -6,7 +6,7 @@
 /*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 16:20:57 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/12 16:22:54 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/10/12 17:48:48 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 typedef struct s_point
 {
-	int x;
-	int y;
-} t_point;
+	int	x;
+	int	y;
+}	t_point;
 
 #endif

@@ -6,13 +6,13 @@
 /*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 15:45:32 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/12 15:52:43 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/10/12 17:46:01 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_swap(int *a, int *b)
 {
-	int temp;
+	int	temp;
 
 	temp = a;
 	a = b;
