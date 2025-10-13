@@ -6,7 +6,7 @@
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 15:59:02 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/13 14:28:08 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/10/13 14:36:22 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	ft_putstr(char *str)
 		ft_putchar(str[i]);
 		i++;
 	}
-	ft_putchar('\n');
+	ft_putchar("\n");
 }
 
 void	ft_print_argv(int argc, char **argv)
