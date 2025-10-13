@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_numbers.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 15:41:58 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/12 15:52:52 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/10/13 14:22:32 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,12 @@
 
 void	ft_print_numbers(void)
 {
-	write(1, "0123456789", 10);
+	char	a;
+
+	a = '0';
+	while (a <= '9')
+	{
+		ft_putchar(a);
+		a++;
+	}
 }
