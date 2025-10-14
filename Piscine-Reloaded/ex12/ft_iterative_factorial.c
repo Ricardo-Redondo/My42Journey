@@ -3,29 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rsao-pay <rsao-pay@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 15:52:30 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/12 17:44:02 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/10/14 12:20:25 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_iterative_factorial(int nb)
 {
 	int	i;
+	int	num;
 
-	i = nb;
 	if (nb < 0)
 		return (0);
-	else if (nb == 1 || nb == 0)
+	if (nb == 0)
 		return (1);
-	else
+	i = 1;
+	num = 1;
+	while (i <= nb)
 	{
-		while (i > 1)
-		{
-			nb = nb * (i - 1);
-			i--;
-		}
-		return (nb);
+		num = num * i;
+		++i;
 	}
+	return (num);
 }

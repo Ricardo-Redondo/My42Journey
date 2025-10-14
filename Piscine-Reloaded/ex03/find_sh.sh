@@ -1,1 +1,1 @@
-basename $(find . -name "*.sh") | sed 's/.\{3\}$//'
+find . -type f -name '*.sh' -exec basename -s '.sh' {} +

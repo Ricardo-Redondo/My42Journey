@@ -5,71 +5,72 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/12 15:59:02 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/13 14:36:22 by rsao-pay         ###   ########.fr       */
+/*   Created: 2025/10/14 12:14:56 by rsao-pay          #+#    #+#             */
+/*   Updated: 2025/10/14 12:15:34 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 void	ft_putchar(char c);
+
+void	display_sorted_args(int argc, char **argv)
+{
+	int		i;
+	int		j;
+	char	*str;
+
+	i = 0;
+	while (++i < argc)
+	{
+		j = -1;
+		str = argv[i];
+		while (str[++j])
+			ft_putchar(str[j]);
+		ft_putchar('\n');
+	}
+}
+
+void	swap(int j, char **argv)
+{
+	char	*tmp;
+
+	tmp = argv[j];
+	argv[j] = argv[j + 1];
+	argv[j + 1] = tmp;
+}
 
 int	ft_strcmp(char *s1, char *s2)
 {
-	int	i;
-
-	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0')
-		i++;
-	return (s1[i] - s2[i]);
-}
-
-void	ft_putstr(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i] != '\0')
+	while (*s1 != '\0' || *s2 != '\0')
 	{
-		ft_putchar(str[i]);
-		i++;
+		if (*s1 != *s2)
+			return (*s1 - *s2);
+		++s1;
+		++s2;
 	}
-	ft_putchar("\n");
-}
-
-void	ft_print_argv(int argc, char **argv)
-{
-	int	i;
-
-	i = 1;
-	while (i < argc)
-	{
-		ft_putstr(argv[i]);
-		i++;
-	}
+	if (*s1 != *s2)
+		return (*s1 - *s2);
+	return (0);
 }
 
 int	main(int argc, char **argv)
 {
 	int		i;
 	int		j;
-	char	*temp;
+	char	*str1;
+	char	*str2;
 
-	i = 1;
-	while (i < argc)
+	i = 0;
+	while (++i < argc)
 	{
-		j = 1;
-		while (j < argc)
+		j = 0;
+		while (++j < argc - i)
 		{
-			if (ft_strcmp(argv[i], argv[j]) < 0)
-			{
-				temp = argv[i];
-				argv[i] = argv[j];
-				argv[j] = temp;
-			}
-			j++;
+			str1 = argv[j];
+			str2 = argv[j + 1];
+			if (ft_strcmp(str1, str2) > 0)
+				swap(j, argv);
 		}
-		i++;
 	}
-	ft_print_argv(argc, argv);
+	display_sorted_args(argc, argv);
+	return (0);
 }

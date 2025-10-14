@@ -6,11 +6,13 @@
 /*   By: rsao-pay <rsao-pay@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/12 15:41:58 by rsao-pay          #+#    #+#             */
-/*   Updated: 2025/10/13 14:22:32 by rsao-pay         ###   ########.fr       */
+/*   Updated: 2025/10/14 12:10:01 by rsao-pay         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {
